@@ -1,0 +1,8 @@
+
+# Ignore checkpoints 
+.ipynb_checkpoints/* 
+
+# Ignore the local __pycache__ 
+src/__pycache__/* 
+
+
