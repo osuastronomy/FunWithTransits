@@ -16,8 +16,6 @@ import matplotlib.pyplot as plt
 
 # matplotlib presets that make the graphs look not hideous 
 mpl.rcParams["font.family"] = "serif"
-mpl.rcParams["text.usetex"] = True 
-mpl.rcParams["text.latex.preamble"] = [r"\usepackage{amsmath}"]
 mpl.rcParams["errorbar.capsize"] = 5
 mpl.rcParams["axes.linewidth"] = 2
 mpl.rcParams["xtick.major.size"] = 16
@@ -111,7 +109,7 @@ ascending order.""")
 		show to the user. 
 		""" 
 		from .dataset import dataset 
-		fig = plt.figure(figsize = (10, 7)) 
+		fig = plt.figure(figsize = (12, 7)) 
 		ax = fig.add_subplot(111, facecolor = "white") 
 		ax.set_xlabel("Time (seconds)") 
 		ax.set_ylabel("Relative Brightness") 
@@ -120,7 +118,7 @@ ascending order.""")
 		ax.yaxis.set_ticks([0.98, 0.99, 1.0, 1.01]) 
 		data = dataset() 
 		data.show(ax) 
-		ax.text(15000, 1.005, r"$\chi_\text{dof}^2$ = %.2f" % (
+		ax.text(15000, 1.005, r"$\chi_{dof}^2$ = %.2f" % (
 			data.chi_squared(self)), fontsize = 25) 
 		xvals = [ax.get_xlim()[0] + (ax.get_xlim()[1] - 
 			ax.get_xlim()[0]) * i / 1000. for i in range(1001)] 
