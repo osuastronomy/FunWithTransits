@@ -118,8 +118,14 @@ ascending order.""")
 		ax.yaxis.set_ticks([0.98, 0.99, 1.0, 1.01]) 
 		data = dataset() 
 		data.show(ax) 
-		ax.text(15000, 1.005, r"$\chi_{dof}^2$ = %.2f" % (
+		ax.text(13000, 1.002, r"$\chi_{dof}^2$ = %.2f" % (
 			data.chi_squared(self)), fontsize = 25) 
+		time = (
+			(self._times[2] - self._times[0]) + 
+			(self._times[3] - self._times[1]) 
+		) / 2. 
+		ax.text(13000, 1.005, "Transit Time: %.2f seconds" % (time), 
+			fontsize = 25) 
 		xvals = [ax.get_xlim()[0] + (ax.get_xlim()[1] - 
 			ax.get_xlim()[0]) * i / 1000. for i in range(1001)] 
 		ax.plot(xvals, [self.__call__(i) for i in xvals], c = 'r') 
