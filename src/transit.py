@@ -109,8 +109,8 @@ ascending order.""")
 		show to the user. 
 		""" 
 		from .dataset import dataset 
-		fig = plt.figure(figsize = (12, 7)) 
-		ax = fig.add_subplot(111, facecolor = "white") 
+		fig = plt.figure(figsize = (12, 7), facecolor = "white") 
+		ax = fig.add_subplot(111) 
 		ax.set_xlabel("Time (seconds)") 
 		ax.set_ylabel("Relative Brightness") 
 		ax.set_xlim([0, 36000]) 
