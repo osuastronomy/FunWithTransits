@@ -9,7 +9,7 @@ import random
 class dataset(transit): 
 
 	def __init__(self, seed = 2, npoints = 1000, sigma = 0.001): 
-		super().__init__(0.0128, 9882, 12193, 24106, 26397) 
+		super().__init__(0.01423, 9582, 11893, 23806, 26097) 
 		random.seed(a = seed) 
 		self._data = npoints * [None] 
 		self._sigma = sigma 
